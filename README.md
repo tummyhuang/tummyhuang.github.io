@@ -1,2 +1,2 @@
-# TummyHuang.github.io
+# tummyhuang.github.io
 Test WebSite
