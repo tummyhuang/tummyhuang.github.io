@@ -1,6 +1,37 @@
-
-
-<div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Input Test Case</title>
+<style>
+  .file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+</style>
+</head>
+<body>
+  <a href="javascript:;" class="file">选择文件
+    <input type="file" name="" id="">
+  </a>
+  
+  <div>
 相机,拍摄图片:
 user:<input type="button" accept="image/*" capture="user"/>
 *:<input type="button" accept="image/*" capture="*"/>
@@ -35,3 +66,5 @@ false:<input type="button" accept="video/*" capture="false"/>
 </br>
 相册选择视频:<input type="button" accept="video/*"/>
 </div>
+</body>
+</html>
