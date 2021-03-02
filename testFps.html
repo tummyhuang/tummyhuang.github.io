@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <style>
+    .list img {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  
+  
+<div id="app">
+  
+  <button v-on:click="toggle">toggle {{message}}</button>
+  <div scrolly v-if="showScrollView" style="width: 100%; height: 800px; display: block; overflow: scroll;">
+    <div style="position: relative;">
+      <div style="position: absolute; right: 10px;">
+        <img src="" style="width: 10px; height: 10px" />
+        <span style="display:inline-block; color: white; padding-top: 10px; font-size: 14px;">分享</span>
+      </div>
+      <img style="width: 100%; height: 300px;" :src="IMAGE_URL + `/large/${Math.floor(Math.random() * 50)}.png`" />
+    </div>
+    <div>
+      <div style="padding: 10px; position: relative;">
+        <img :src="IMAGE_URL + `/small/${Math.floor(Math.random() * 50)}.png`" style="width: 50px; height: 50px; border-radius: 100%;"/>
+        <span style="display: inline-block; vertical-align: top;">绿萝-mm</span>
+        <div style="position: absolute; right: 10px; top: 15px; background: red; padding: 5px 10px; border-radius: 20px; font-size: 12px; color: white;">+ 关注</div>
+      </div>
+      <div style="margin-bottom: 50px; font-size: 12px; text-align: center;">明亮干净的滤镜，简单的文字，就像家一样舒服自在~</div>
+    </div>
+    <div class="list" style="display: grid; grid-template-columns: repeat(2, 50%); grid-auto-rows: minmax(100px, auto); grid-gap: 10px; font-size: 12px;">
+      <div v-for="(item, index) in items" :key="index" style="border-radius: 5px; overflow: hidden;">
+        <img :src="IMAGE_URL + `/medium/${Math.floor(Math.random() * 50)}.png`" style="display: block;" />
+        <div style="padding: 10px;">明亮干净的滤镜，简单的文字，就像家一样舒服自在~</div>
+        <div style="position: relative;">
+          <img :src="IMAGE_URL + `/small/${Math.floor(Math.random() * 50)}.png`" style="width: 20px; height: 20px; border-radius: 100%;" />
+          <span style="display: inline-block; vertical-align: top;">绿萝-mm</span>
+          <div style="position: absolute; right: 5px; top: 2px;">{{Math.floor(Math.random() * 10000)}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <script>
+    var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    IMAGE_URL: 'https://eric-1258893381.cos.ap-guangzhou.myqcloud.com/',
+    showScrollView: true,
+    items: Array.from({ length: 800 }).fill(1)
+  },
+  
+  methods: {
+    toggle() {
+      this.message = this.message ? '' : 'Hello'
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          this.showScrollView = !this.showScrollView
+        })
+      })
+    }
+  }
+})
+  </script>
+
+</body>
+</html>
