@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Input Test Case</title>
+<style>
+  .file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+  }
+  .file input {
+      position: absolute;
+      font-size: 100px;
+      right: 0;
+      top: 0;
+      opacity: 0;
+  }
+</style>
+</head>
+<body>
+  <div>
+    <p>相机,拍摄图片:</p>
+    <div>
+    <a href="javascript:;" class="file">user:
+      <input type="file" accept="image/*" capture="user"/>
+    </a>
+    </div>
+    <div>
+    <a href="javascript:;" class="file">*:
+      <input type="file" accept="image/*" capture="*"/>
+    </a>
+    </div>
+    <div>
+    <a href="javascript:;" class="file">environment:
+      <input type="file" accept="image/*" capture="environment"/>
+    </a>
+    </div>
+    <div>
+    <a href="javascript:;" class="file">false:
+      false:<input type="file" accept="image/*" capture="false"/>
+    </a>
+    </div>
+  </div>
+  
+  <div>
+    <p>相册选择图片:</p>
+    <a href="javascript:;" class="file"> photo
+      <input type="file" accept="image/*"/>
+    </a>
+  </div>
+ 
+  <div>
+    <p>选择音频文件:</p>
+    <div>
+    <a href="javascript:;" class="file">
+      user:<input type="file" accept="audio/*" capture="user"/>
+    </a>
+    </div>
+    <div>
+    <a href="javascript:;" class="file">
+      no captrue audio:<input type="file" accept="audio/*"/>
+    </a>
+    </div>
+  </div>
+  
+  <div>    
+    <p>相机,拍摄视频:</p>
+    <div>
+    <a href="javascript:;" class="file">
+      user:<input type="file" accept="video/*" capture="user"/>
+    </a>
+    </div>
+    <div>
+    <a href="javascript:;" class="file">
+      *:<input type="file" accept="video/*" capture="*"/>
+    </a>
+    </div>
+    <div>
+    <a href="javascript:;" class="file">
+      environment:<input type="file" accept="video/*" capture="environment"/>
+    </a>
+    </div>
+    <div>
+    <a href="javascript:;" class="file">
+      false:<input type="file" accept="video/*" capture="false"/>>
+    </a>
+    </div>
+  </div>
+  
+  <div>
+    <p>相册选择视频:</p>
+    <a href="javascript:;" class="file"> video
+      <input type="file" accept="video/*"/>
+    </a>
+  </div>
+  
+  <div>
+    <p>新的测试case:</p>
+    <a href="javascript:;" class="file"> camera
+      <input type="file" accept="image/jpeg" capture="camera" />
+    </a>
+    <a href="javascript:;" class="file"> camera2
+      <input type="file" accept="video/mp4" capture="camera" />
+    </a>
+  </div>
+
+</body>
+</html>
